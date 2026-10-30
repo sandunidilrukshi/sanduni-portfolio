@@ -1387,3 +1387,206 @@
     transition: none;
   }
 }
+
+
+/* =================================
+   DAY 05 — TECHNICAL SKILLS SECTION
+================================= */
+
+.skills-section {
+  padding: 96px 0 100px;
+  background: #FFFFFF;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.skill-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 28px;
+  border: 1px solid rgba(11, 31, 58, 0.12);
+  border-radius: var(--radius-lg);
+  background: #FFFFFF;
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(11, 31, 58, 0.35);
+  box-shadow: 0 16px 36px rgba(11, 31, 58, 0.09);
+}
+
+.skill-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.skill-card-number {
+  color: var(--color-accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.skill-card-symbol {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: var(--radius-sm);
+  color: #FFFFFF;
+  background: var(--color-primary);
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.skill-card h3 {
+  margin: 22px 0 9px;
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.skill-card-description {
+  min-height: 52px;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.83rem;
+  line-height: 1.8;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 23px;
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 7px 11px;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  color: var(--color-primary);
+  background: #F7F9FC;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.skills-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  max-width: 850px;
+  margin-top: 32px;
+  padding: 19px 21px;
+  border-left: 3px solid var(--color-accent);
+  background: #F7F9FC;
+}
+
+.skills-note-mark {
+  display: grid;
+  width: 23px;
+  height: 23px;
+  flex: 0 0 23px;
+  place-items: center;
+  border-radius: 50%;
+  color: #FFFFFF;
+  background: var(--color-primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.skills-note p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  line-height: 1.8;
+}
+
+/* =================================
+   DAY 05 — TABLET
+================================= */
+
+@media (max-width: 900px) {
+  .skills-grid {
+    gap: 17px;
+  }
+
+  .skill-card {
+    padding: 23px;
+  }
+}
+
+/* =================================
+   DAY 05 — MOBILE
+================================= */
+
+@media (max-width: 680px) {
+  .skills-section {
+    padding: 68px 0 75px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .skill-card {
+    padding: 22px 19px;
+  }
+
+  .skill-card h3 {
+    margin-top: 19px;
+  }
+
+  .skill-card-description {
+    min-height: auto;
+  }
+
+  .skill-tags {
+    gap: 8px;
+    margin-top: 19px;
+  }
+
+  .skill-tag {
+    font-size: 0.67rem;
+  }
+
+  .skills-note {
+    margin-top: 23px;
+    padding: 16px;
+  }
+}
+
+/* =================================
+   DAY 05 — ACCESSIBILITY
+================================= */
+
+.skill-card:focus-within {
+  outline: 2px solid #2563EB;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-card {
+    transition: none;
+  }
+}

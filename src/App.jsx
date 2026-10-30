@@ -301,6 +301,145 @@ function AboutSection() {
   );
 }
 
+
+const skillCategories = [
+  {
+    number: '01',
+    title: 'Networking',
+    description:
+      'Network infrastructure, switching, routing, and enterprise network configuration.',
+    icon: '01',
+    skills: [
+      'VLAN',
+      'Inter-VLAN Routing',
+      'STP',
+      'EtherChannel',
+      'LACP',
+      'OSPF',
+      'Access Control Lists',
+      'DHCP',
+      'NAT',
+      'SSH',
+      
+    ],
+  },
+  {
+    number: '02',
+    title: 'Cybersecurity',
+    description:
+      'Network monitoring, access control, and security-focused project concepts.',
+    icon: '02',
+    skills: [
+      'Network Intrusion Detection',
+      'NIDS',
+      'Zero Trust Concepts',
+      'Network Security',
+      'Access Control',
+      'Security Monitoring',
+    ],
+  },
+  {
+    number: '03',
+    title: 'Development',
+    description:
+      'Technologies used to build web applications and practical technical projects.',
+    icon: '03',
+    skills: [
+      'JavaScript',
+      'Node.js',
+      'Express.js',
+      'REST APIs',
+      'HTML',
+      'CSS',
+      'Socket.IO',
+    ],
+  },
+  {
+    number: '04',
+    title: 'Tools & Databases',
+    description:
+      'Tools and platforms used during development, network labs, and project work.',
+    icon: '04',
+    skills: [
+      'MongoDB',
+      'MongoDB Compass',
+      'Git',
+      'GitHub',
+      'Cisco Packet Tracer',
+      'Postman',
+      'Visual Studio Code',
+    ],
+  },
+];
+
+function SkillsSection() {
+  return (
+    <section
+      id="skills"
+      className="skills-section"
+      aria-labelledby="skills-heading"
+    >
+      <div className="container">
+        <div className="section-heading">
+          <span className="section-eyebrow">MY TECHNICAL TOOLKIT</span>
+
+          <h2 id="skills-heading">
+            Technical <span>Skills.</span>
+          </h2>
+
+          <p>
+            Technologies, concepts, and tools I have explored through
+            academic learning and practical project development.
+          </p>
+        </div>
+
+        <div className="skills-grid">
+          {skillCategories.map((category) => (
+            <article className="skill-card" key={category.number}>
+              <div className="skill-card-header">
+                <span className="skill-card-number">
+                  {category.number}
+                </span>
+
+                <span className="skill-card-symbol" aria-hidden="true">
+                  {category.icon}
+                </span>
+              </div>
+
+              <h3>{category.title}</h3>
+
+              <p className="skill-card-description">
+                {category.description}
+              </p>
+
+              <div
+                className="skill-tags"
+                aria-label={`${category.title} skills`}
+              >
+                {category.skills.map((skill) => (
+                  <span className="skill-tag" key={skill}>
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="skills-note">
+          <span className="skills-note-mark" aria-hidden="true">i</span>
+          <p>
+            These skills represent technologies and concepts explored
+            through my studies and hands-on projects. I continue to
+            develop and strengthen my practical knowledge.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
 function EducationSection() {
   return (
     <section
@@ -381,6 +520,7 @@ function Footer() {
   );
 }
 
+
 function App() {
   return (
     <div className="app-shell">
@@ -388,9 +528,11 @@ function App() {
       <HeroSection />
       <AboutSection />
       <EducationSection />
+      <SkillsSection />
       <Footer />
     </div>
   );
 }
+
 
 export default App;
