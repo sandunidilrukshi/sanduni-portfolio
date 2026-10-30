@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import './App.css';
 
@@ -18,10 +19,7 @@ function Navbar() {
 
   return (
     <header className="site-header">
-      <nav
-        className="navbar container"
-        aria-label="Main navigation"
-      >
+      <nav className="navbar container" aria-label="Main navigation">
         <a
           className="brand"
           href="#home"
@@ -37,9 +35,7 @@ function Navbar() {
         <button
           className="menu-toggle"
           type="button"
-          aria-label={
-            menuOpen ? 'Close navigation menu' : 'Open navigation menu'
-          }
+          aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
           aria-expanded={menuOpen}
           aria-controls="primary-navigation"
           onClick={() => setMenuOpen((open) => !open)}
@@ -66,11 +62,7 @@ function Navbar() {
             ))}
           </div>
 
-          <a
-            className="nav-cta"
-            href="#contact"
-            onClick={closeMenu}
-          >
+          <a className="nav-cta" href="#contact" onClick={closeMenu}>
             Let's Connect <span aria-hidden="true">↗</span>
           </a>
         </div>
@@ -79,105 +71,125 @@ function Navbar() {
   );
 }
 
-function FoundationPreview() {
+function HeroSection() {
   return (
     <main id="home">
-      <section className="foundation-section">
-        <div className="container foundation-grid">
-          <div className="foundation-copy">
-            <span className="eyebrow">
-              PORTFOLIO FOUNDATION
-            </span>
+      <section className="hero-section" aria-labelledby="hero-heading">
+        <div className="container hero-grid">
+          <div className="hero-copy">
+            <div className="hero-eyebrow">
+              <span className="hero-status-dot" />
+              NETWORK TECHNOLOGY PORTFOLIO
+            </div>
 
-            <h1>
-              Building a professional
-              <span> digital identity.</span>
+            <p className="hero-intro">Hello, I'm Sanduni.</p>
+
+            <h1 id="hero-heading">
+              Building Secure
+              <span>&amp; Reliable</span>
+              Networks.
             </h1>
 
-            <p className="foundation-description">
-              A portfolio focused on Network Technology,
-              enterprise networking, cybersecurity, and
-              practical technical projects.
+            <p className="hero-description">
+              I'm a third-year ICT undergraduate at the University of
+              Sri Jayewardenepura, specializing in Network Technology.
+              I'm passionate about enterprise networking, network security,
+              and developing practical technology solutions.
             </p>
 
-            <div className="foundation-actions">
+            <div className="hero-focus">
+              <span>Enterprise Networking</span>
+              <span>Network Security</span>
+              <span>Cybersecurity</span>
+            </div>
+
+            <div className="hero-actions">
               <a className="button button-primary" href="#projects">
-                Explore Projects <span aria-hidden="true">↗</span>
+                View My Projects <span aria-hidden="true">↗</span>
               </a>
 
-              <a className="button button-secondary" href="#about">
-                Discover More
+              <a className="button button-secondary" href="#contact">
+                Contact Me
               </a>
             </div>
 
-            <p className="foundation-note">
-              DESIGN SYSTEM INITIALIZED
-              <span className="status-dot" />
-            </p>
+            <div className="hero-socials" aria-label="Social profiles">
+              <a
+                href="https://github.com/sandunidilrukshi"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit my GitHub profile"
+              >
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
+
+              <span className="social-divider" aria-hidden="true">/</span>
+
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit LinkedIn"
+              >
+                LinkedIn <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
 
-          <div className="design-card">
-            <div className="design-card-header">
-              <span>DESIGN SYSTEM</span>
-              <span className="live-label">
-                <span className="status-dot" />
-                ACTIVE
-              </span>
+          <aside className="hero-profile-card" aria-label="Technical profile">
+            <div className="profile-card-top">
+              <span>TECHNICAL PROFILE</span>
+              <span className="profile-card-index">01 / 04</span>
             </div>
 
-            <div className="design-card-content">
-              <p className="card-label">BRAND COLORS</p>
-
-              <div className="swatch-grid">
-                <div className="swatch">
-                  <div className="swatch-color swatch-blue" />
-                  <span>Deep Blue</span>
-                  <code>#0B1F3A</code>
-                </div>
-
-                <div className="swatch">
-                  <div className="swatch-color swatch-white" />
-                  <span>White</span>
-                  <code>#FFFFFF</code>
-                </div>
-
-                <div className="swatch">
-                  <div className="swatch-color swatch-black" />
-                  <span>Black</span>
-                  <code>#111318</code>
-                </div>
-              </div>
-
-              <div className="card-divider" />
-
-              <p className="card-label">CORE PRINCIPLES</p>
-
-              <div className="principle-list">
-                <div className="principle">
-                  <span className="principle-number">01</span>
-                  <span>Clean & Professional</span>
-                  <span aria-hidden="true">↗</span>
-                </div>
-
-                <div className="principle">
-                  <span className="principle-number">02</span>
-                  <span>Responsive by Design</span>
-                  <span aria-hidden="true">↗</span>
-                </div>
-
-                <div className="principle">
-                  <span className="principle-number">03</span>
-                  <span>Built for Technical Work</span>
-                  <span aria-hidden="true">↗</span>
-                </div>
-              </div>
+            <div className="profile-monogram" aria-hidden="true">
+              S<span>.</span>
             </div>
 
-            <div className="design-card-footer">
-              <span>VERSION 1.0</span>
+            <div className="profile-card-name">
+              <h2>Network Technology</h2>
+              <p>Learning. Building. Securing.</p>
+            </div>
+
+            <div className="profile-card-divider" />
+
+            <p className="profile-label">AREAS OF INTEREST</p>
+
+            <ul className="profile-interest-list">
+              <li>
+                <span className="interest-number">01</span>
+                <span>Enterprise Network Design</span>
+                <span aria-hidden="true">↗</span>
+              </li>
+              <li>
+                <span className="interest-number">02</span>
+                <span>Network Infrastructure</span>
+                <span aria-hidden="true">↗</span>
+              </li>
+              <li>
+                <span className="interest-number">03</span>
+                <span>Network Security</span>
+                <span aria-hidden="true">↗</span>
+              </li>
+              <li>
+                <span className="interest-number">04</span>
+                <span>Cybersecurity Projects</span>
+                <span aria-hidden="true">↗</span>
+              </li>
+            </ul>
+
+            <div className="profile-card-footer">
+              <span>ICT UNDERGRADUATE</span>
               <span>S / PORTFOLIO</span>
             </div>
-          </div>
+          </aside>
+        </div>
+
+        <div className="hero-bottom-line container">
+          <span>NETWORKING · SECURITY · TECHNOLOGY</span>
+          <a href="#about">
+            SCROLL TO EXPLORE <span aria-hidden="true">↓</span>
+          </a>
         </div>
       </section>
     </main>
@@ -192,9 +204,7 @@ function Footer() {
           SANDUNI<span>.</span>
         </a>
 
-        <p>
-          Network Technology · Portfolio
-        </p>
+        <p>Network Technology · Portfolio</p>
 
         <span className="footer-year">
           © {new Date().getFullYear()}
@@ -208,7 +218,7 @@ function App() {
   return (
     <div className="app-shell">
       <Navbar />
-      <FoundationPreview />
+      <HeroSection />
       <Footer />
     </div>
   );
