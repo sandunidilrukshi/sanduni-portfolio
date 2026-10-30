@@ -968,3 +968,422 @@
     transition: none;
   }
 }
+
+
+/* =================================
+   DAY 04 — ABOUT SECTION
+================================= */
+
+.about-section {
+  padding: 96px 0;
+  background: #FFFFFF;
+}
+
+.section-heading {
+  max-width: 650px;
+  margin-bottom: 46px;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  color: var(--color-accent);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.section-heading h2 {
+  margin: 14px 0 12px;
+  color: var(--color-primary);
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.07em;
+  line-height: 1.1;
+}
+
+.section-heading h2 span {
+  color: var(--color-accent);
+}
+
+.section-heading > p {
+  max-width: 520px;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+  align-items: stretch;
+  gap: clamp(30px, 6vw, 76px);
+}
+
+.about-main {
+  padding: 8px 0;
+}
+
+.about-small-label {
+  color: var(--color-text-muted);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.about-main h3 {
+  max-width: 620px;
+  margin: 20px 0;
+  color: var(--color-primary);
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 1.25;
+}
+
+.about-main h3 span {
+  color: var(--color-accent);
+}
+
+.about-main p {
+  max-width: 650px;
+  margin: 0 0 17px;
+  color: var(--color-text-muted);
+  font-size: 0.91rem;
+  line-height: 1.95;
+}
+
+.about-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  color: var(--color-primary);
+  font-size: 0.82rem;
+  font-weight: 800;
+  transition: color 180ms ease;
+}
+
+.about-text-link:hover {
+  color: var(--color-accent);
+}
+
+/* ABOUT HIGHLIGHT CARD */
+
+.about-highlight-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(11, 31, 58, 0.12);
+  border-radius: var(--radius-lg);
+  background: #F7F9FC;
+  box-shadow: var(--shadow-soft);
+}
+
+.about-card-top,
+.about-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 23px;
+  color: #FFFFFF;
+  background: var(--color-primary);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.about-card-top > span:last-child {
+  color: #93C5FD;
+  font-size: 1.2rem;
+}
+
+.about-highlight-item {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 12px;
+  padding: 22px 23px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-highlight-number {
+  color: var(--color-accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.about-highlight-item h4 {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.about-highlight-item p {
+  margin: 6px 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.77rem;
+  line-height: 1.6;
+}
+
+.about-card-bottom {
+  margin-top: auto;
+  color: #DCE8F8;
+  background: var(--color-primary);
+  font-size: 0.58rem;
+}
+
+/* =================================
+   DAY 04 — EDUCATION SECTION
+================================= */
+
+.education-section {
+  padding: 92px 0 100px;
+  background:
+    radial-gradient(
+      ellipse at 95% 10%,
+      rgba(59, 130, 246, 0.08),
+      transparent 35%
+    ),
+    #F7F9FC;
+}
+
+.education-card {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) 150px;
+  align-items: stretch;
+  gap: 22px;
+  overflow: hidden;
+  padding: 34px;
+  border: 1px solid rgba(11, 31, 58, 0.12);
+  border-radius: var(--radius-lg);
+  background: #FFFFFF;
+  box-shadow: var(--shadow-soft);
+}
+
+.education-card-marker {
+  display: flex;
+  justify-content: center;
+}
+
+.education-card-marker span {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: var(--radius-sm);
+  color: #FFFFFF;
+  background: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.education-content {
+  min-width: 0;
+}
+
+.education-status {
+  display: inline-block;
+  padding: 7px 10px;
+  border-radius: 4px;
+  color: var(--color-primary);
+  background: #EAF0F8;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.education-content h3 {
+  margin: 18px 0 8px;
+  color: var(--color-primary);
+  font-size: clamp(1.25rem, 2.5vw, 1.8rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.3;
+}
+
+.education-program {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.education-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  color: var(--color-primary);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.education-meta-divider {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.education-focus-block {
+  max-width: 650px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+}
+
+.education-focus-block > span {
+  color: var(--color-text-muted);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.education-focus-block p {
+  margin: 9px 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.84rem;
+  line-height: 1.85;
+}
+
+.education-card-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  min-height: 180px;
+  border-radius: var(--radius-md);
+  color: #FFFFFF;
+  background: var(--color-primary);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.education-card-side span:first-child {
+  margin-bottom: 8px;
+  color: #93C5FD;
+  font-size: 2rem;
+  letter-spacing: -0.05em;
+}
+
+/* =================================
+   DAY 04 — TABLET
+================================= */
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about-main {
+    max-width: 720px;
+  }
+
+  .about-highlight-card {
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .education-card {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+
+  .education-card-side {
+    display: none;
+  }
+}
+
+/* =================================
+   DAY 04 — MOBILE
+================================= */
+
+@media (max-width: 680px) {
+  .about-section {
+    padding: 68px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .section-heading > p {
+    font-size: 0.88rem;
+  }
+
+  .about-main h3 {
+    font-size: 1.7rem;
+  }
+
+  .about-main p {
+    font-size: 0.86rem;
+  }
+
+  .about-card-top,
+  .about-card-bottom {
+    padding-inline: 17px;
+  }
+
+  .about-highlight-item {
+    padding: 19px 17px;
+  }
+
+  .education-section {
+    padding: 68px 0 75px;
+  }
+
+  .education-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 23px 19px;
+  }
+
+  .education-card-marker {
+    justify-content: flex-start;
+  }
+
+  .education-card-marker span {
+    width: 38px;
+    height: 38px;
+  }
+
+  .education-content h3 {
+    font-size: 1.35rem;
+  }
+
+  .education-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .education-meta-divider {
+    display: none;
+  }
+
+  .education-focus-block {
+    margin-top: 22px;
+  }
+}
+
+/* =================================
+   DAY 04 — ACCESSIBILITY
+================================= */
+
+.about-section a:focus-visible,
+.education-section a:focus-visible {
+  outline: 3px solid #2563EB;
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-text-link {
+    transition: none;
+  }
+}

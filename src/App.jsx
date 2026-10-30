@@ -5,6 +5,7 @@ import './App.css';
 const navigationLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
+  { label: 'Education', href: '#education' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
@@ -196,6 +197,172 @@ function HeroSection() {
   );
 }
 
+function AboutSection() {
+  return (
+    <section
+      id="about"
+      className="about-section"
+      aria-labelledby="about-heading"
+    >
+      <div className="container">
+        <div className="section-heading">
+          <span className="section-eyebrow">GET TO KNOW ME</span>
+          <h2 id="about-heading">
+            About <span>Me.</span>
+          </h2>
+          <p>
+            A little about my academic journey, technical interests,
+            and approach to learning.
+          </p>
+        </div>
+
+        <div className="about-grid">
+          <div className="about-main">
+            <span className="about-small-label">MY INTRODUCTION</span>
+
+            <h3>
+              Interested in building technology that is
+              <span> reliable, secure, and meaningful.</span>
+            </h3>
+
+            <p>
+              I am a third-year ICT undergraduate at the University of
+              Sri Jayewardenepura, with a focus on Network Technology.
+              My academic journey has developed my interest in computer
+              networks, network infrastructure, and the role of security
+              in modern digital environments.
+            </p>
+
+            <p>
+              I enjoy learning through practical work, exploring network
+              configurations, troubleshooting connectivity, and developing
+              technical projects. I aim to strengthen my knowledge by
+              applying concepts to realistic networking and cybersecurity
+              scenarios.
+            </p>
+
+            <p>
+              I am continuously working to improve my technical abilities,
+              problem-solving skills, and understanding of secure network
+              design.
+            </p>
+
+            <a className="about-text-link" href="#projects">
+              Explore my technical work <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <aside className="about-highlight-card">
+            <div className="about-card-top">
+              <span>PROFILE OVERVIEW</span>
+              <span aria-hidden="true">✳</span>
+            </div>
+
+            <div className="about-highlight-item">
+              <span className="about-highlight-number">01</span>
+              <div>
+                <h4>Academic Background</h4>
+                <p>ICT Undergraduate</p>
+              </div>
+            </div>
+
+            <div className="about-highlight-item">
+              <span className="about-highlight-number">02</span>
+              <div>
+                <h4>Specialization</h4>
+                <p>Network Technology</p>
+              </div>
+            </div>
+
+            <div className="about-highlight-item">
+              <span className="about-highlight-number">03</span>
+              <div>
+                <h4>Technical Interests</h4>
+                <p>Networking &amp; Cybersecurity</p>
+              </div>
+            </div>
+
+            <div className="about-highlight-item">
+              <span className="about-highlight-number">04</span>
+              <div>
+                <h4>Learning Approach</h4>
+                <p>Practical, project-based learning</p>
+              </div>
+            </div>
+
+            <div className="about-card-bottom">
+              <span>CURIOUS BY NATURE</span>
+              <span>ALWAYS LEARNING</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function EducationSection() {
+  return (
+    <section
+      id="education"
+      className="education-section"
+      aria-labelledby="education-heading"
+    >
+      <div className="container">
+        <div className="section-heading">
+          <span className="section-eyebrow">MY ACADEMIC JOURNEY</span>
+          <h2 id="education-heading">
+            Education<span>.</span>
+          </h2>
+          <p>
+            The academic foundation behind my interest in technology
+            and networking.
+          </p>
+        </div>
+
+        <article className="education-card">
+          <div className="education-card-marker" aria-hidden="true">
+            <span>01</span>
+          </div>
+
+          <div className="education-content">
+            <span className="education-status">
+              UNDERGRADUATE STUDIES
+            </span>
+
+            <h3>University of Sri Jayewardenepura</h3>
+
+            <p className="education-program">
+              Information and Communication Technology (ICT)
+            </p>
+
+            <div className="education-meta">
+              <span>Third-Year Undergraduate</span>
+              <span className="education-meta-divider" />
+              <span>Focus: Network Technology</span>
+            </div>
+
+            <div className="education-focus-block">
+              <span>AREA OF FOCUS</span>
+              <p>
+                Network Technology — developing an academic and practical
+                foundation in computer networks, network infrastructure,
+                and network security.
+              </p>
+            </div>
+          </div>
+
+          <div className="education-card-side" aria-hidden="true">
+            <span>ICT</span>
+            <span>NETWORK</span>
+            <span>TECHNOLOGY</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  );
+}
+
 function Footer() {
   return (
     <footer className="site-footer">
@@ -219,6 +386,8 @@ function App() {
     <div className="app-shell">
       <Navbar />
       <HeroSection />
+      <AboutSection />
+      <EducationSection />
       <Footer />
     </div>
   );
