@@ -439,6 +439,332 @@ function SkillsSection() {
   );
 }
 
+const projects = [
+  {
+    number: '01',
+    category: 'NETWORK ENGINEERING',
+    title: 'LinkLogic',
+    description:
+      'An interactive network design and troubleshooting simulator for creating network topologies, configuring devices, testing connectivity, and identifying common network configuration issues.',
+    technologies: [
+      'React',
+      'TypeScript',
+      'Vite',
+      'React Flow',
+      'CSS',
+      'Node.js',
+    ],
+    highlights: [
+      'Interactive network topology design',
+      'PC, switch, and router configuration',
+      'IPv4 addressing and connectivity testing',
+      'Network validation and troubleshooting guidance',
+      'Topology save, load, import, and export',
+    ],
+    github: 'https://github.com/sandunidilrukshi/LinkLogic',
+    githubLabel: 'View GitHub Repository',
+  },
+  {
+    number: '02',
+    category: 'ENTERPRISE NETWORKING',
+    title: 'Secure Multi-Site Enterprise Network',
+    description:
+      'A Cisco Packet Tracer enterprise network simulation demonstrating secure network infrastructure and connectivity across multiple network segments.',
+    technologies: [
+      'Cisco Packet Tracer',
+      'VLAN',
+      'Inter-VLAN Routing',
+      'HSRP',
+      'LACP EtherChannel',
+      'RSTP',
+      'WLC',
+    ],
+    highlights: [
+      'VLAN-based network segmentation',
+      'Inter-VLAN routing',
+      'HSRP gateway redundancy',
+      'LACP EtherChannel and RSTP',
+      'Enterprise services and wireless integration',
+    ],
+    github:
+      'https://github.com/sandunidilrukshi/Secure-MultiSite-Enterprise-Network',
+    githubLabel: 'View GitHub Repository',
+  },
+  {
+    number: '03',
+    category: 'CYBERSECURITY',
+    title: 'PhishGuard',
+    description:
+      'An educational phishing-awareness web application that helps users inspect URLs and email text for common phishing indicators and evaluate basic password strength.',
+    technologies: [
+      'React',
+      'TypeScript',
+      'Vite',
+      'Python',
+      'Flask',
+      'REST API',
+    ],
+    highlights: [
+      'URL analysis for phishing warning indicators',
+      'Email text analysis',
+      'Basic password strength checking',
+      'Recent URL scan history',
+      'Frontend and backend integration',
+    ],
+    github: 'https://github.com/sandunidilrukshi/PhishGuard',
+    githubLabel: 'View GitHub Repository',
+  },
+  {
+    number: '04',
+    category: 'CYBERSECURITY',
+    title: 'Network Intrusion Detection System',
+    description:
+      'A web-based Network Intrusion Detection System project with a dashboard for displaying security alerts and working with stored network log information.',
+    technologies: [
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Socket.IO',
+      'JavaScript',
+      'HTML',
+      'CSS',
+    ],
+    highlights: [
+      'Real-time alert updates using Socket.IO',
+      'MongoDB-based log storage',
+      'Log search functionality',
+      'Log export functionality',
+      'Security monitoring dashboard',
+    ],
+    github: 'https://github.com/sandunidilrukshi/NIDS_project',
+    githubLabel: 'View GitHub Repository',
+  },
+  {
+    number: '05',
+    category: 'ZERO TRUST SECURITY',
+    title: 'Zero Trust Network Architecture Simulator',
+    description:
+      'A simulator exploring Zero Trust Network Architecture through identity-based authentication, device trust scoring, access control, security monitoring, and risk-based decisions.',
+    technologies: [
+      'React',
+      'JavaScript',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'JWT',
+    ],
+    highlights: [
+      'Identity-based authentication',
+      'Device trust scoring',
+      'Access control',
+      'Security monitoring',
+      'Risk-based access decisions',
+    ],
+    github:
+      'https://github.com/sandunidilrukshi/zero-trust-network-architecture-simulator',
+    githubLabel: 'View GitHub Repository',
+  },
+  {
+    number: '06',
+    category: 'NETWORK ANALYSIS',
+    title: 'Network Traffic Analysis Using Wireshark',
+    description:
+      'A practical network traffic analysis project using Wireshark to capture, inspect, and understand common network protocols and packet behaviour.',
+    technologies: [
+      'Wireshark',
+      'Npcap',
+      'ICMP',
+      'DNS',
+      'TCP',
+      'UDP',
+      'DHCP',
+    ],
+    highlights: [
+      'ICMP Echo Request and Reply inspection',
+      'DNS query and response analysis',
+      'TCP three-way handshake analysis',
+      'DHCP packet inspection',
+      'TCP retransmission and protocol statistics',
+    ],
+    github:
+      'https://github.com/sandunidilrukshi/Network-Traffic-Analysis-Using-Wireshark',
+    githubLabel: 'View GitHub Repository',
+  },
+  {
+    number: '07',
+    category: 'NETWORK MONITORING',
+    title: 'Network Monitor Dashboard',
+    description:
+      'A real-time network monitoring dashboard that tracks device availability using ICMP ping and displays online/offline status and response time.',
+    technologies: [
+      'Node.js',
+      'Express.js',
+      'React',
+      'ICMP',
+    ],
+    highlights: [
+      'Device availability monitoring',
+      'Online and offline status display',
+      'Response time monitoring',
+      'Web-based monitoring dashboard',
+    ],
+    github:
+      'https://github.com/sandunidilrukshi/network-monitor-dashboard',
+    githubLabel: 'View GitHub Repository',
+  },
+  {
+    number: '08',
+    category: 'NETWORK ENGINEERING',
+    title: 'Cisco Enterprise VLAN Network',
+    description:
+      'A Cisco Packet Tracer enterprise networking project focused on VLAN-based network segmentation, inter-VLAN communication, and network access control.',
+    technologies: [
+      'Cisco Packet Tracer',
+      'VLAN',
+      'Inter-VLAN Routing',
+      'DHCP',
+      'ACL',
+      'SSH',
+      'Port Security',
+    ],
+    highlights: [
+      'Department-based VLAN configuration',
+      'Inter-VLAN routing',
+      'DHCP configuration',
+      'Access Control List implementation',
+      'SSH and port security configuration',
+    ],
+    github:
+      'https://github.com/sandunidilrukshi/Cisco-Enterprise-VLAN-Network',
+    githubLabel: 'View GitHub Repository',
+  },
+  {
+    number: '09',
+    category: 'SOFTWARE DEVELOPMENT',
+    title: 'Library Management System',
+    description:
+      'A full-stack Library Management System project developed using the MERN stack.',
+    technologies: [
+      'MongoDB',
+      'Express.js',
+      'React',
+      'Node.js',
+    ],
+    highlights: [
+      'MERN stack application development',
+      'Frontend and backend project structure',
+    ],
+    github:
+      'https://github.com/sandunidilrukshi/Library-Management-System',
+    githubLabel: 'View GitHub Repository',
+  },
+];
+
+function ProjectsSection() {
+  return (
+    <section
+      id="projects"
+      className="projects-section"
+      aria-labelledby="projects-heading"
+    >
+      <div className="container">
+        <div className="section-heading">
+          <span className="section-eyebrow">
+            SELECTED WORK
+          </span>
+
+          <h2 id="projects-heading">
+            Projects & <span>Practical Work.</span>
+          </h2>
+
+          <p>
+            A selection of networking and cybersecurity projects
+            that reflect my academic learning and hands-on
+            technical exploration.
+          </p>
+        </div>
+
+        <div className="projects-grid">
+          {projects.map((project) => (
+            <article
+              className="project-card"
+              key={project.number}
+            >
+              <div className="project-card-top">
+                <span className="project-number">
+                  PROJECT / {project.number}
+                </span>
+
+                <span className="project-category">
+                  {project.category}
+                </span>
+              </div>
+
+              <div className="project-card-content">
+                <h3>{project.title}</h3>
+
+                <p className="project-description">
+                  {project.description}
+                </p>
+
+                <div className="project-details">
+                  <h4>Key Areas</h4>
+
+                  <ul>
+                    {project.highlights.map((highlight) => (
+                      <li key={highlight}>
+                        {highlight}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="project-technologies">
+                  <h4>Technologies & Concepts</h4>
+
+                  <div className="project-tags">
+                    {project.technologies.map((technology) => (
+                      <span key={technology}>
+                        {technology}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="project-card-footer">
+                {project.github ? (
+                  <a
+                    className="project-link"
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Open ${project.title} GitHub repository in a new tab`}
+                  >
+                    {project.githubLabel}
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                ) : (
+                  <span className="project-link project-link-disabled">
+                    {project.githubLabel}
+                  </span>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <p className="projects-note">
+          Project descriptions highlight the concepts and
+          implementation areas explored. Please refer to each
+          repository for the available source code and project
+          documentation.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 
 function EducationSection() {
   return (
@@ -529,6 +855,7 @@ function App() {
       <AboutSection />
       <EducationSection />
       <SkillsSection />
+      <ProjectsSection />
       <Footer />
     </div>
   );
