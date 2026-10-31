@@ -83,17 +83,20 @@ function HeroSection() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <div className="hero-eyebrow">
-              <span className="hero-status-dot" />
-              NETWORK TECHNOLOGY PORTFOLIO
-            </div>
+  <span className="hero-status-dot" />
+  PERSONAL PORTFOLIO
+</div>
 
-            <p className="hero-intro">Hello, I'm Sanduni.</p>
+<p className="hero-intro">Hello, I'm</p>
 
-            <h1 id="hero-heading">
-              Building Secure
-              <span>&amp; Reliable</span>
-              Networks.
-            </h1>
+<h1 id="hero-heading">
+  Sanduni
+  <span>Dilrukshika.</span>
+</h1>
+
+<p className="hero-tagline">
+  Building Secure &amp; Reliable Networks.
+</p>
 
             <p className="hero-description">
               I'm a third-year ICT undergraduate at the University of
@@ -141,20 +144,23 @@ function HeroSection() {
             </div>
           </div>
 
-          <aside className="hero-profile-card" aria-label="Technical profile">
+          <aside className="hero-profile-card" aria-label="my profile">
             <div className="profile-card-top">
-              <span>TECHNICAL PROFILE</span>
+              <span>MY PROFILE</span>
               <span className="profile-card-index">01 / 04</span>
             </div>
 
-            <div className="profile-monogram" aria-hidden="true">
-              S<span>.</span>
-            </div>
+            <div className="profile-photo">
+  <img
+    src="/images/sanduni-profile.png"
+    alt="Portrait of Sanduni"
+  />
+</div>
 
             <div className="profile-card-name">
-              <h2>Network Technology</h2>
-              <p>Learning. Building. Securing.</p>
-            </div>
+  <h2>Sanduni Dilrukshika</h2>
+  <p>ICT Undergraduate | Network Technology</p>
+</div>
 
             <div className="profile-card-divider" />
 
