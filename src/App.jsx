@@ -75,7 +75,11 @@ function Navbar() {
 function HeroSection() {
   return (
     <main id="home">
-      <section className="hero-section" aria-labelledby="hero-heading">
+      <section
+  id="home"
+  className="hero-section"
+  aria-labelledby="hero-heading"
+>
         <div className="container hero-grid">
           <div className="hero-copy">
             <div className="hero-eyebrow">
@@ -127,7 +131,7 @@ function HeroSection() {
               <span className="social-divider" aria-hidden="true">/</span>
 
               <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/sanduni-dilrukshika-b897a5385/"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Visit LinkedIn"
