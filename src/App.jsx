@@ -764,7 +764,117 @@ function ProjectsSection() {
     </section>
   );
 }
+function ContactSection() {
+  return (
+    <section
+      id="contact"
+      className="contact-section"
+      aria-labelledby="contact-heading"
+    >
+      <div className="container">
+        <div className="contact-wrapper">
+          <div className="contact-content">
+            <span className="section-eyebrow">
+              GET IN TOUCH
+            </span>
 
+            <h2 id="contact-heading">
+              Let's Connect & <span>Collaborate.</span>
+            </h2>
+
+            <p className="contact-description">
+              I am interested in networking, cybersecurity,
+              and technology-related opportunities. Feel free
+              to reach out for professional connections,
+              internship opportunities, or project discussions.
+            </p>
+
+            <a
+              className="contact-email-button"
+              href="mailto:sandunidilrukshi49@gmail.com"
+              aria-label="Send an email to Sanduni Dilrukshi"
+            >
+              <span className="contact-email-icon" aria-hidden="true">
+                @
+              </span>
+
+              <span>
+                <small>EMAIL ME</small>
+                <strong>sandunidilrukshi49@gmail.com</strong>
+              </span>
+
+              <span className="contact-arrow" aria-hidden="true">
+                ↗
+              </span>
+            </a>
+          </div>
+
+          <div className="contact-side">
+            <div className="contact-side-heading">
+              <span className="contact-side-number">01 / CONNECT</span>
+              <h3>Find me online.</h3>
+              <p>
+                Explore my technical work and professional profile.
+              </p>
+            </div>
+
+            <div className="contact-social-links">
+              <a
+                className="contact-social-link"
+                href="https://github.com/sandunidilrukshi"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit my GitHub profile in a new tab"
+              >
+                <span className="social-icon" aria-hidden="true">
+                  GH
+                </span>
+
+                <span className="social-link-text">
+                  <strong>GitHub</strong>
+                  <small>Explore my repositories</small>
+                </span>
+
+                <span className="social-arrow" aria-hidden="true">
+                  ↗
+                </span>
+              </a>
+
+              <a
+                className="contact-social-link"
+                href="https://www.linkedin.com/in/sanduni-dilrukshika-b897a5385/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit my LinkedIn profile in a new tab"
+              >
+                <span className="social-icon" aria-hidden="true">
+                  in
+                </span>
+
+                <span className="social-link-text">
+                  <strong>LinkedIn</strong>
+                  <small>Connect professionally</small>
+                </span>
+
+                <span className="social-arrow" aria-hidden="true">
+                  ↗
+                </span>
+              </a>
+            </div>
+
+            <div className="contact-availability">
+              <span className="availability-dot" aria-hidden="true"></span>
+              <p>
+                Open to professional connections and
+                technology-related opportunities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function EducationSection() {
   return (
@@ -856,6 +966,7 @@ function App() {
       <EducationSection />
       <SkillsSection />
       <ProjectsSection />
+      <ContactSection />
       <Footer />
     </div>
   );
