@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 const navigationLinks = [
@@ -41,11 +41,11 @@ function Navbar() {
           aria-controls="primary-navigation"
           onClick={() => setMenuOpen((open) => !open)}
         >
+
           <span />
           <span />
           <span />
         </button>
-
         <div
           id="primary-navigation"
           className={`nav-panel ${menuOpen ? 'is-open' : ''}`}
@@ -968,10 +968,67 @@ function Footer() {
 
 
 function App() {
+  useEffect(() => {
+    if (!('IntersectionObserver' in window)) {
+      return;
+    }
+
+    const animatedElements = document.querySelectorAll(
+      [
+        '.hero-copy',
+        '.hero-profile-card',
+        '.section-heading',
+        '.about-main',
+        '.about-highlight-card',
+        '.education-card',
+        '.skill-card',
+        '.skills-note',
+        '.project-card',
+        '.contact-wrapper',
+      ].join(',')
+    );
+
+    animatedElements.forEach((element, index) => {
+      element.classList.add('reveal-on-scroll');
+
+      if (
+        element.matches('.skill-card, .project-card')
+      ) {
+        element.style.setProperty(
+          '--reveal-delay',
+          `${(index % 4) * 100}ms`
+        );
+      }
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: '0px 0px -50px 0px',
+      }
+    );
+
+    animatedElements.forEach((element) => {
+      observer.observe(element);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <div className="app-shell">
-      <Navbar />
-      <HeroSection />
+  <div className="app-shell">
+    <Navbar />
+    <HeroSection />
       <AboutSection />
       <EducationSection />
       <SkillsSection />
